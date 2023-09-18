@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.5/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+
 </head>
 
 <body>
@@ -16,22 +17,23 @@
     </header>
     <main class="container mx-auto mt-8">
         <section class="bg-gray-100 p-4 m-4">
-            <input type="text" placeholder="Search Here...." class="input input-bordered w-full max-w-xs" />
-            <button class="btn btn-secondary">Search</button>
+            <input id="search-filed" type="text" placeholder="Search Here...."
+                class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSerch()" class="btn btn-secondary">Search</button>
 
         </section>
+        <!-- lodar added  -->
+
         <section>
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-infinity loading-lg text-success"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- <div class="card w-96 bg-gray-100 shadow-xl">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div> -->
+
+            </div>
+            <!-- show all  -->
+            <div id="show-all-container" class="hidden p-4 m-4">
+                <button onclick="handleShowAll()" class="btn btn-primary">Show All </button>
             </div>
         </section>
     </main>
